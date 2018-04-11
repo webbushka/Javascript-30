@@ -118,13 +118,10 @@ const data = [
   "truck"
 ];
 console.log(
-  data.reduce(
-    (acc, curr) => {
-      const obj = { ...acc };
-      if (!obj[curr]) obj[curr] = 0;
-      obj[curr] = obj[curr] + 1;
-      return obj;
-    },
-    {}
-  )
+  data.reduce((acc, curr) => {
+    const obj = { ...acc };
+    if (!obj[curr]) obj[curr] = 0;
+    obj[curr] = obj[curr] + 1;
+    return obj;
+  }, {})
 );
